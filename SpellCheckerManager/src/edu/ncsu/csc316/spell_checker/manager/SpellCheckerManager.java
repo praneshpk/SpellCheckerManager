@@ -4,6 +4,12 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+/**
+ * This class maintains all the methods and variables for spell checking words from an input
+ * file and dictionary file
+ * @author Pranesh Kamalakanthan
+ *
+ */
 public class SpellCheckerManager {
 	/** Hash table where all words in dictionary are stored */
 	private HashTable dict;
@@ -39,6 +45,7 @@ public class SpellCheckerManager {
 	
 	/**
 	 * This method generates a hashcode from the given string
+	 * @param e given string
 	 * @return hash code
 	 */
 	public int genHash(String e) {
@@ -76,7 +83,6 @@ public class SpellCheckerManager {
 						throw new IllegalArgumentException("Error: File has a word with illegal characters");
 				
 				String word = w;
-				//System.out.println(word);
 				boolean r1 = true;
 				boolean r2 = true;
 				boolean r3 = true;
@@ -86,7 +92,6 @@ public class SpellCheckerManager {
 				boolean r7 = true;
 				// Checks if whole word is in dictionary
 				for(lookup++; !dict.contains(word, genHash(word));) {
-					System.out.println(word);
 					// General rule
 					if( word.length() < 4 ) {
 						r5 = false;

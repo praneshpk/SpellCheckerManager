@@ -63,7 +63,10 @@ public class DoubleList<E> {
 		n.setPrev(add);
 		size++;
 	}
-	
+	/**
+	 * Returns a String representation of the contents of the list
+	 * @return list contents as string
+	 */
 	public String toString() {
 		String res = "ArrayBasedList[";
 		if(size == 0)

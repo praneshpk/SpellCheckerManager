@@ -11,7 +11,7 @@ public class HashTable {
 	/** The size of the table */
 	private int size;
 	/** Default capacity */
-	private static int CAP = 25147 * 2;
+	private static int capacity = 25147 * 2;
 	/** Number of probes */
 	private int probes; 
 	
@@ -29,7 +29,7 @@ public class HashTable {
 		
 		/**
 		 * Creates a new HashNode object
-		 * @param d node data
+		 * @param e node data
 		 */
 		public HashNode(String e) {
 			data = e;
@@ -38,6 +38,7 @@ public class HashTable {
 		
 		/**
 		 * Gets the node data
+		 * @return node data
 		 */
 		public String data() { return data; }
 		
@@ -56,16 +57,16 @@ public class HashTable {
 	/** 
 	 * Creates a new HashTable object with default size
 	 */
-	public HashTable() { this(CAP); }
+	public HashTable() { this(capacity); }
 	
 	/** 
-	 * Creates a new HashTable object of given size
-	 * @param s size of table
+	 * Creates a new HashTable object of given capacity
+	 * @param cap size of table
 	 */
 	public HashTable(int cap) {
 		size = 0;
 		probes = 0;
-		CAP = cap;
+		capacity = cap;
 		table = new HashNode[cap];
 	}
 	
@@ -128,7 +129,7 @@ public class HashTable {
 	 * @return index
 	 */
 	public int compress(int hash) {
-		hash = (3 * hash + 11) % CAP;
+		hash = (3 * hash + 11) % capacity;
 		if(hash < 0)
 			hash *= -1;
 		return hash;

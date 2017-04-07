@@ -9,6 +9,10 @@ import java.util.Scanner;
  *
  */
 public class SpellCheckerUI {
+	/**
+	 * Starts the program
+	 * @param args command line arguments
+	 */
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		System.out.print("Enter the path to the dictionary: ");
