@@ -182,6 +182,8 @@ public class SpellCheckerManager {
 					}
 				}
 			}
+			if(words.size() > 0)
+				System.out.println("Potentially misspelled words: " + words);
 			System.out.println("Number of words in dictionary: " + dict.size());
 			System.out.println("Number of words to be spell-checked: " + wordcount);
 			System.out.println("Number of misspelled words: " + words.size());
@@ -191,8 +193,7 @@ public class SpellCheckerManager {
 			System.out.println("Average number of probes per lookUp: " + ((double)dict.probes() / lookup));
 			System.out.println();
 			
-			//words = ArrayList.alphabetize(words);
-			return words.toString();
+			return "ArrayBasedList" + words.toString();
 
 		} catch(FileNotFoundException e) {
 			System.out.println("Error: File " + path + " not found");

@@ -68,7 +68,7 @@ public class DoubleList<E> {
 	 * @return list contents as string
 	 */
 	public String toString() {
-		String res = "ArrayBasedList[";
+		String res = "[";
 		if(size == 0)
 			return res + "]";
 		Node<E> curr = getFirst();
