@@ -171,6 +171,10 @@ public class SpellCheckerManager {
 							boolean add = true;
 							Node<String> curr = words.getFirst();
 							for( int i = 0; i < words.size(); i++) {
+								if(curr.getData().compareTo(w) == 0) {
+									add = false;
+									break;
+								}
 								if(curr.getData().compareToIgnoreCase(w) > 0 ) {
 									words.add(w, curr.getPrev(), curr);
 									add = false;

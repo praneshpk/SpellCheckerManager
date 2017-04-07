@@ -46,7 +46,7 @@ public class SpellCheckerManagerTest {
 		SpellCheckerManager s = new SpellCheckerManager("input/dictionary.txt");
 		assertEquals(s.spellCheck("input/small_sample.txt"), "ArrayBasedList[]");
 		assertEquals(s.spellCheck("input/complicatedWordTextFile.txt"), "ArrayBasedList[]");
-		assertEquals(s.spellCheck("input/invalidWordTextFile.txt"), "ArrayBasedList[49ers, broski, brotendo, dogger, gotta, Llamajeans, Llamajeans, me&'s, timeyo]");
+		assertEquals(s.spellCheck("input/invalidWordTextFile.txt"), "ArrayBasedList[49ers, broski, brotendo, dogger, gotta, Llamajeans, me&'s, timeyo]");
 		/*try {
 			System.out.println(s.spellCheck("input/illegalTextFile.txt"));
 		} catch(Exception e) {
