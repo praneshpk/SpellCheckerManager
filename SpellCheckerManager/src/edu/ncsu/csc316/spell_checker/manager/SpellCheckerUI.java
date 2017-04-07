@@ -17,6 +17,8 @@ public class SpellCheckerUI {
 		Scanner in = new Scanner(System.in);
 		System.out.print("Enter the path to the dictionary: ");
 		SpellCheckerManager s = new SpellCheckerManager(in.nextLine());
+		System.out.print("Enter the path to the words you want to spell check:" );
+		System.out.println(s.spellCheck(in.nextLine()));
 	}
 	
 }

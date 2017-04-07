@@ -75,13 +75,6 @@ public class SpellCheckerManager {
 			while( in.hasNext()) {
 				String w = in.next();
 				wordcount++;
-				/*for(int i = 0; i < w.length(); i++ )
-					if(!Character.isAlphabetic(w.charAt(i)) && 
-							!Character.isDigit(w.charAt(i)) && 
-							w.charAt(i) != '\'' &&
-							w.charAt(i) != '&')
-						throw new IllegalArgumentException("Error: File has a word with illegal characters");*/
-				
 				String word = w;
 				boolean r1 = true;
 				boolean r2 = true;
